@@ -22,9 +22,8 @@ jobs:
     - name: Setup vcpkg
       working-directory: c:/
       run: |
-        git clone https://github.com/microsoft/vcpkg.git
+        git clone --depth 1 --branch 2026.06.01 https://github.com/microsoft/vcpkg.git
         cd vcpkg
-        git checkout eb35a05cc21c69ec1399f7532b7dd61d271ac0d1
         bootstrap-vcpkg.bat
         vcpkg.exe integrate install
 
