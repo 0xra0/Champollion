@@ -23,6 +23,7 @@ jobs:
       working-directory: c:/
       run: |
         git clone --depth 1 --branch 2026.06.01 https://github.com/microsoft/vcpkg.git
+        git config --global --add safe.directory C:/vcpkg
         cd vcpkg
         bootstrap-vcpkg.bat
         vcpkg.exe integrate install
