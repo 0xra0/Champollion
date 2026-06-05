@@ -33,6 +33,7 @@ include(GNUInstallDirs)
 
 option(CHAMPOLLION_STATIC_LIBRARY "Build Champollion as a static library" OFF)
 option(CHAMPOLLION_USE_STATIC_RUNTIME "Compile Champollion with static runtime" OFF)
+option(CHAMPOLLION_BUILD_GUI "Build Qt6 GUI frontend (requires Qt6)" OFF)
 
 if (NOT CHAMPOLLION_STATIC_LIBRARY)
   set(CMAKE_CXX_STANDARD 20)
@@ -167,4 +168,7 @@ else()
   install(
     TARGETS Champollion
   )
+  if(CHAMPOLLION_BUILD_GUI)
+    add_subdirectory(GUI)
+  endif()
 endif()

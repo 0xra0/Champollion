@@ -32,7 +32,16 @@ vcpkg_installed/
 vcpkg_installed/**
 vcpkg-manifest-install.log
 # Default build directory
-build
+build/
+
+# Decompiler trace output files
+rebuild-*.txt
+
+# Test / working data
+CosT/
+
+# Downloaded zip (we track the extracted .ps1 directly)
+Decompiled_PSC_Repair-*.zip
 
 # Jetbrains IDEs
 .idea/
