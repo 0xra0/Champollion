@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.15 FATAL_ERROR)
 cmake_policy(SET CMP0048 NEW) # VERSION variables
 cmake_policy(SET CMP0091 NEW) # CMAKE_MSVC_RUNTIME_LIBRARY
+cmake_policy(SET CMP0167 NEW) # use BoostConfig.cmake instead of deprecated FindBoost
 
 # Get the version number from Decompiler/Version.hpp
 file(READ "${CMAKE_CURRENT_SOURCE_DIR}/Decompiler/Version.hpp" CHAMPOLLION_VERSION_FILE)
